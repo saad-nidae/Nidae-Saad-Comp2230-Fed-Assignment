@@ -1,20 +1,27 @@
+/* 
+Adventure Game Script
+This script handles the logic for the adventure game, rendering questions and answers based on the player's choices.
+the questions and answers for the adventure game. are defined on my .md file that contains the full game plan
+*/ 
+
 document.addEventListener("DOMContentLoaded", (event) => {
+    // Initialize the game by rendering the first question
     let currentState = "game_start";
     let nextQuestion;
     let answersList;
     const answersContainer = document.getElementById("answers");
-
-    function renderQuestion(value) {
+    
+    function renderQuestion(value) {// Render the question and answers based on the current game state
         const questionContainer = document.getElementById("question-container")
         const questionElement = document.getElementById("question");
-        answersContainer.innerHTML = "";
-
-        switch (value) {
+        answersContainer.innerHTML = "";// Clear previous answers before rendering new ones
+        
+        switch (value) {// Determine the next question and answers based on the current game state
             case "game_start":
                 nextQuestion =  "You wake up on a sandy beach, surrounded by pieces of the shipwreck. You are alone. A dense forest lies behind you and the open sea stretches ahead.";
                 questionElement.textContent = nextQuestion;
                 answersList = {"Build a boat": "build_a_boat", "Explore the forest": "explore_forest", "light a signal fire": "signal_fire"};
-                AddAnswerButton(answersList);
+                AddAnswerButton(answersList);// Add answer buttons for the current question
                 break;
 
             case "build_a_boat":
@@ -118,87 +125,90 @@ document.addEventListener("DOMContentLoaded", (event) => {
             case "game_over":
                 nextQuestion = "Game Over. Thank you for playing!";
                 questionElement.textContent = nextQuestion;
-                //answersList = {"End Game": "game_over", "restart": "game_start"};
-                //AddAnswerButton(answersList);
+                currentState = "reload_game";
+                answersList = {"End Game": "game_over", "restart": "game_start"};
+                AddAnswerButton(answersList);
                 break;
         }
     }
 
-    function AddAnswerButton(list) {
+    function AddAnswerButton(list) {// Add answer buttons for the current question
 
-        list = Object.entries(list);
+        list = Object.entries(list);// Convert the answers list into an array
         list.forEach(([key, value]) => {
-            const answerBtn = document.createElement("input");
+            const answerBtn = document.createElement("input");// Create a radio button for the eachanswer
             answerBtn.type = "radio";
             answerBtn.name = "answer";
-            answerBtn.value = value;
+            answerBtn.value = value;// Set the value of the radio button to the corresponding story state
             const label = document.createElement("label");
-            label.appendChild(answerBtn);
-            label.append(key);
+            label.appendChild(answerBtn);// Append the radio button to the label
+            label.append(key);// Append the answer text to the label
             answersContainer.appendChild(label);
-            answerBtn.addEventListener("change", () => {
+            answerBtn.addEventListener("change", () => {// Update the current state when an answer is selected
                 currentState = answerBtn.value;
             });
         });
     }
 
-        const nextBtn = document.getElementById("next-btn");
-        nextBtn.addEventListener("click", (event) => {
-            if (currentState === "game_start") {
-                 renderQuestion(currentState);
-            }
-            if (currentState === "build_a_boat") {
-                 renderQuestion(currentState);
-            }
-            if (currentState === "ending_crash") {
-                 renderQuestion(currentState);
-            }
-            if (currentState === "canes_boat") {    
-                 renderQuestion(currentState);
-            }
-            if (currentState === "ending_escape") {
-                 renderQuestion(currentState);
-            }   
-            if (currentState === "ending_storm") {
-                 renderQuestion(currentState);
-            }  
-            if (currentState === "explore_forest") {
-                 renderQuestion(currentState);
-            }   
-            if (currentState === "ending_tiger") {
-                 renderQuestion(currentState);
-            }  
-            if (currentState === "cave") {
+    const nextBtn = document.getElementById("next-btn");// Get the "Next" button element
+    nextBtn.addEventListener("click", (event) => {// Handle the "Next" button click event
+        // Render the question for the current story state
+        if (currentState === "game_start") {
+            renderQuestion(currentState);
+        }
+        if (currentState === "build_a_boat") {
+            renderQuestion(currentState);
+        }
+        if (currentState === "ending_crash") {
+            renderQuestion(currentState);
+        }
+        if (currentState === "canes_boat") {    
+            renderQuestion(currentState);
+        }
+        if (currentState === "ending_escape") {
+            renderQuestion(currentState);
+        }   
+        if (currentState === "ending_storm") {
+            renderQuestion(currentState);
+        }  
+        if (currentState === "explore_forest") {
+            renderQuestion(currentState);
+        }   
+        if (currentState === "ending_tiger") {
                 renderQuestion(currentState);
-            }
-            if (currentState === "ending_treasure") {
-                renderQuestion(currentState);
-            }
-            if (currentState === "signal_fire") {
-                renderQuestion(currentState);
-            }
-            if (currentState === "ending_nosmoke") {
-                renderQuestion(currentState);
-            }
-            if (currentState === "fire_lit") {
-                renderQuestion(currentState);
-            }
-            if (currentState === "signal_fire") {
-                renderQuestion(currentState);
-            }
-            if (currentState === "ending_nosmoke") {
-                renderQuestion(currentState);
-            }
-            if (currentState === "ending_rescued") {
-                renderQuestion(currentState);
-            }                   
-            if (currentState === "ending_fire_out") {
-                 renderQuestion(currentState);
-            }
-            if (currentState === "game_over") {
-                 renderQuestion(currentState);
-                 location.reload();
-            }
-         
-        });
+        }  
+        if (currentState === "cave") {
+            renderQuestion(currentState);
+        }
+        if (currentState === "ending_treasure") {
+            renderQuestion(currentState);
+        }
+        if (currentState === "signal_fire") {
+            renderQuestion(currentState);
+        }
+        if (currentState === "ending_nosmoke") {
+            renderQuestion(currentState);
+        }
+        if (currentState === "fire_lit") {
+            renderQuestion(currentState);
+        }
+        if (currentState === "signal_fire") {
+            renderQuestion(currentState);
+        }
+        if (currentState === "ending_nosmoke") {
+            renderQuestion(currentState);
+        }
+        if (currentState === "ending_rescued") {
+            renderQuestion(currentState);
+        }                   
+        if (currentState === "ending_fire_out") {
+            renderQuestion(currentState);
+        }
+        if (currentState === "game_over") {
+            renderQuestion(currentState);
+        }
+        if (currentState === "reload_game") {
+            location.reload();
+        }
+    });
 });
