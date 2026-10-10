@@ -12,11 +12,11 @@ _Story branches will diverge into three story paths_
     
 ### Explore the island forest -> forest
         The forest is thick and noisy. You find the entrance to a dark cave but you also hear growling deeper in the trees.
-        1 - Keep exploring the forest -> ending_tiger
+        1 - Keep exploring the forest  dispite the growling-> ending_tiger
         2 - Enter the cave despite the creatures -> cave
             At the back of the cave you find a treasure chest with an old map showing an escape plan lying on top of it. But snakes, spiders, and scorpions crawl all around them.
             a - Face your fear and take both the treasure and the map -> ending_treasure
-            b - Give in to your fear and run out empty-handed -> signal_fire
+            b - Give in to your fear and run out to light a signal fire -> signal_fire
 *Story branches reconversion into 'signal' fire decision point*
 
 ### Light a signal fire and wait for rescue -> signal_fire:
@@ -27,8 +27,10 @@ _Story branches will diverge into three story paths_
             a - Stay awake -> ending_rescued
             B - Have some rest untill a rescue comes -> ending_fire_out
 
-###All Story States:
+### All Story States:
+    The game will run with default story state:
     1 - getting_ready
+
     2 - story_start
     3 - build_a_boat
     4 - explore_forest
@@ -45,3 +47,6 @@ _Story branches will diverge into three story paths_
     14 - fire_lit
     15 - ending_rescued
     16 - ending_fire_out
+
+    17 - game-over
+    18 - reload-game
