@@ -26,3 +26,22 @@ _Story branches will diverge into three story paths_
             The fire burns brightly as night falls. A ship's lights appear far away.
             a - Stay awake -> ending_rescued
             B - Have some rest untill a rescue comes -> ending_fire_out
+
+###All Story States:
+    1 - getting_ready
+    2 - story_start
+    3 - build_a_boat
+    4 - explore_forest
+    5 - signal_fire
+    6 - ending_crash
+    7 - canes_boat
+    8 - ending_escape
+    9 - ending_storm
+    10 - ending_tiger
+    11 - cave
+    12 - ending_treasure
+    13 - signal_fire
+    13 - ending_nosmoke
+    14 - fire_lit
+    15 - ending_rescued
+    16 - ending_fire_out
