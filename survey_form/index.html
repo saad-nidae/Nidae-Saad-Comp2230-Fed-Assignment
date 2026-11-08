@@ -27,3 +27,35 @@
         <input type="email" id="email" name="email">
         <span class="error" id="emailError"></span>
       </div>
+      <!-- Radio buttons -->
+      <fieldset class="field">
+        <legend>How often do you visit?</legend>
+        <label><input type="radio" name="frequency" value="First time"> First time</label>
+        <label><input type="radio" name="frequency" value="Monthly"> Monthly</label>
+        <label><input type="radio" name="frequency" value="Weekly"> Weekly</label>
+        <label><input type="radio" name="frequency" value="Daily"> Daily</label>
+        <span class="error" id="frequencyError"></span>
+      </fieldset>
+
+      <!-- Checkboxes -->
+      <fieldset class="field">
+        <legend>What did you order?</legend>
+        <label><input type="checkbox" id="orderCoffee" name="orders" value="Coffee"> Coffee</label>
+        <label><input type="checkbox" id="orderTea" name="orders" value="Tea"> Tea</label>
+        <label><input type="checkbox" id="orderPastry" name="orders" value="Pastry"> Pastry</label>
+        <label><input type="checkbox" id="orderSandwich" name="orders" value="Sandwich"> Sandwich</label>
+        <span class="error" id="ordersError"></span>
+      </fieldset>
+
+      <!-- Dropdown -->
+      <div class="field">
+        <label for="location">Which location did you visit?</label>
+        <select id="location" name="location">
+          <option value="">-- Select a location --</option>
+          <option value="Downtown">Downtown</option>
+          <option value="Exchange District">Exchange District</option>
+          <option value="St. Boniface">St. Boniface</option>
+          <option value="Osborne Village">Osborne Village</option>
+        </select>
+        <span class="error" id="locationError"></span>
+      </div>
