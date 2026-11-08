@@ -51,6 +51,66 @@ textarea {
   box-sizing: border-box;
 }
 
+* hover and focus */
+input:hover,
+select:hover,
+textarea:hover {
+  border-color: #6f4e37;
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+  outline: 3px solid #1a73e8;
+}
+
+.error {
+  display: block;
+  color: #b00020;
+  font-size: 16px;
+}
+
+button {
+  background-color: #6f4e37;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 5px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #4a3324;
+}
+
+#clearBtn {
+  margin-top: 15px;
+  background-color: #555555;
+}
+
+.table-box {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 16px;
+}
+
+th, td {
+  border: 1px solid #c9b8a8;
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  background-color: #6f4e37;
+  color: white;
+}
+
 /* small screens */
 @media (max-width: 600px) {
   .container {
