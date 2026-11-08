@@ -1,0 +1,64 @@
+/* Cafe Feedback Survey - simple styles */
+
+body {
+  background-color: #f6efe7;
+  color: #2b1d14;
+  font-family: Georgia, serif;
+  font-size: 18px;
+}
+
+.container {
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: white;
+  border-radius: 10px;
+}
+
+h1, h2 {
+  color: #4a3324;
+}
+
+.field {
+  margin-bottom: 20px;
+  border: none;
+  padding: 0;
+}
+
+label, legend {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+/* labels inside radio and checkbox groups are not bold */
+fieldset label {
+  display: inline-block;
+  font-weight: normal;
+  margin-right: 15px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+select,
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 2px solid #c9b8a8;
+  border-radius: 5px;
+  font-size: 18px;
+  box-sizing: border-box;
+}
+
+/* small screens */
+@media (max-width: 600px) {
+  .container {
+    margin: 0;
+    padding: 10px;
+  }
+
+  fieldset label {
+    display: block;
+  }
+}
