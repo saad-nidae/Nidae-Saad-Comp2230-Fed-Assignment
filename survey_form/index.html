@@ -27,6 +27,28 @@
         <input type="email" id="email" name="email">
         <span class="error" id="emailError"></span>
       </div>
+
+    <!-- Username (regex) -->
+      <div class="field">
+        <label for="username">Username (4 to 12 letters or numbers)</label>
+        <input type="text" id="username" name="username">
+        <span class="error" id="usernameError"></span>
+      </div>
+
+      <!-- Date (regex) -->
+      <div class="field">
+        <label for="visitDate">Date of visit (DD-MM-YYYY)</label>
+        <input type="text" id="visitDate" name="visitDate" placeholder="25-12-2026">
+        <span class="error" id="visitDateError"></span>
+      </div>
+
+      <!-- Receipt code (regex) -->
+      <div class="field">
+        <label for="receiptCode">Receipt code (format ABC-1234)</label>
+        <input type="text" id="receiptCode" name="receiptCode" placeholder="ABC-1234">
+        <span class="error" id="receiptCodeError"></span>
+      </div>
+
       <!-- Radio buttons -->
       <fieldset class="field">
         <legend>How often do you visit?</legend>
