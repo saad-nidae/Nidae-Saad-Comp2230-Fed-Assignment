@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cafe Feedback Survey</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <div class="container">
+    <h1>Cafe Feedback Survey</h1>
+    <p>Tell us about your visit. All fields are required.</p>
+
+    <form id="surveyForm" novalidate aria-label="Cafe feedback survey">
+
+      <!-- Name -->
+      <div class="field">
+        <label for="fullName">Full name</label>
+        <input type="text" id="fullName" name="fullName">
+        <span class="error" id="fullNameError"></span>
+      </div>
+
+      <!-- Email -->
+      <div class="field">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email">
+        <span class="error" id="emailError"></span>
+      </div>
