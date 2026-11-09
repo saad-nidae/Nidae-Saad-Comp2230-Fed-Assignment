@@ -64,7 +64,7 @@ function clearErrors() {
     spans[i].textContent = "";
   }
 }
-unction saveTable() {
+function saveTable() {
   localStorage.setItem("tableData", tableBody.innerHTML);
 }
 
