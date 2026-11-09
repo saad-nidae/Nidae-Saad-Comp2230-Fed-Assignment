@@ -1,10 +1,7 @@
 // Survey form script
-// Step 1: get the parts of the page we need
 const form = document.getElementById("surveyForm");
 const tableBody = document.getElementById("resultsBody");
 const clearButton = document.getElementById("clearBtn");
-
-// Step 2: functions that check elements
 
 function isNotEmpty(text) {
   if (text.trim() === "") {
@@ -55,3 +52,14 @@ function hasCheckedOption(groupName) {
   return false;
 }
 
+function showError(spanId, message) {
+  const span = document.getElementById(spanId);
+  span.textContent = message;
+}
+
+function clearErrors() {
+  const spans = document.getElementsByClassName("error");
+  for (let i = 0; i < spans.length; i++) {
+    spans[i].textContent = "";
+  }
+}
